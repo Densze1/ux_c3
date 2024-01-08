@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Význam slova</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #EFF4FA;
+  }
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    box-shadow: 0px 4px 16px rgba(118, 147, 163, 0.25);
+    padding-bottom: 20px;
+    overflow: auto;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFF;
+    box-shadow: 0 4px 16px rgba(118, 147, 163, 0.25);
+  }
+  .title {
+    color: #5E90FF;
+    font-size: 48px;
+    font-family: 'Jokerman', cursive;
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    border: 1px solid #D6D6D6;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  }
+  .search-input {
+    border: none;
+    outline: none;
+    font-size: 32px;
+    padding: 10px;
+    color: #979797;
+    flex-grow: 1;
+  }
+  .search-button {
+    background: #5E90FF;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; 
+  gap: 10px; 
+  margin-top: 20px; 
+}
+
+  .button {
+    background: linear-gradient(81deg, #FDA197, #FD7ABE);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    
+    flex: 0 0 auto;
+  }
+  .active {
+    border: 3px solid black;
+  }
+
+  .bottom-button {
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  @media (max-width: 320px) {
+    .title {
+      font-size: 20px;
+    }
+
+    .search-input, .button, th, td {
+      font-size: 14px;
+    }
+
+    .buttons, .bottom-button {
+      flex-direction: column;
+    }
+
+    .button {
+      margin: 5px 0;
+      padding: 5px;
+      width: auto; 
+    }
+  }
+
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 24px;
+    }
+
+    .search-input, .button, th, td {
+      font-size: 16px;
+    }
+
+    .button {
+      margin: 10px 0;
+    }
+  }
+
+  
+  @media (max-width: 1200px) {
+    .title {
+      font-size: 36px;
+    }
+
+    .search-input, .button, th, td {
+      font-size: 18px;
+    }
+  }
+
+.text-window {
+  border: 1px solid #D6D6D6;
+  border-radius: 10px;
+  padding: 20px; 
+  margin: 20px; 
+  background-color: #FFF;
+  box-shadow: 0 4px 16px rgba(118, 147, 163, 0.25);
+  font-family: 'Inter', sans-serif;
+  font-size: 20px;
+  color: #000;
+  overflow-y: auto; 
+  height: auto; 
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="header">
+  <span class="title">Generátor gramatiky</span>
+  <div class="search-bar">
+    <input class="search-input" type="text" placeholder="Vyhladávať">
+    <button class="search-button">&#x1F50D;</button>
+  </div>
+</div>
+<div class="text-window">
+    <p>  Použitie slova auto vo vetách: </p>
+    <p>  Kľúče od auta sú na stole.</p>
+    <p>  Dám ti peniaze na opravu auta.</p>
+    <p>  Kúpil som si nové auto.</p>
+    <p>  V aute sme našli starú mapu.</p>
+    <p>  Cestovali sme autom cez celú krajinu.</p>
+</div>
+<div class="bottom-button">
+    <a href="test.html"><button class="button">Späť na tvary</button></a>
+  </div>
+</div>
+</body>
+</html>

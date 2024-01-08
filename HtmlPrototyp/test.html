@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Generátor gramatiky</title>
+<style>
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #EFF4FA;
+  }
+  .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    box-shadow: 0px 4px 16px rgba(118, 147, 163, 0.25);
+    padding-bottom: 20px;
+    overflow: auto;
+  }
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #FFF;
+    box-shadow: 0 4px 16px rgba(118, 147, 163, 0.25);
+  }
+  .title {
+    color: #5E90FF;
+    font-size: 48px;
+    font-family: 'Jokerman', cursive;
+  }
+  .search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #FFF;
+    border: 1px solid #D6D6D6;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  }
+  .search-input {
+    border: none;
+    outline: none;
+    font-size: 32px;
+    padding: 10px;
+    color: #979797;
+    flex-grow: 1;
+  }
+  .search-button {
+    background: #5E90FF;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  .buttons {
+  display: flex;
+  justify-content: center; 
+  flex-wrap: wrap; 
+  gap: 10px; 
+  margin-top: 20px; 
+}
+
+  .button {
+    background: linear-gradient(81deg, #FDA197, #FD7ABE);
+    border-radius: 10px;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    font-size: 24px;
+    cursor: pointer;
+    flex: 0 0 auto;
+  }
+  .active {
+    border: 3px solid black;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    padding: 8px;
+    text-align: left;
+    font-size: 20px;
+    border: 1px solid black;
+  }
+  th {
+    background-color: #EFF4FA;
+  }
+  th:first-child, td:first-child {
+    width: 20%;
+  }
+  th:not(:first-child), td:not(:first-child) {
+    width: 40%;
+  }
+  .table-container {
+    overflow-x: auto;
+    margin: 20px auto;
+    width: calc(100% - 40px);
+  }
+  .bottom-button {
+    text-align: center;
+    margin: 20px auto;
+  }
+
+  @media (max-width: 320px) {
+    .title {
+      font-size: 20px;
+    }
+
+    .search-input, .button, th, td {
+      font-size: 14px;
+    }
+
+    .buttons, .bottom-button {
+      flex-direction: column;
+    }
+
+    .button {
+      margin: 5px 0;
+      padding: 5px;
+      width: auto; 
+    }
+  }
+
+  
+  @media (max-width: 768px) {
+    .title {
+      font-size: 24px;
+    }
+
+    .search-input, .button, th, td {
+      font-size: 16px;
+    }
+
+    .button {
+      margin: 10px 0;
+    }
+  }
+
+  
+  @media (max-width: 1200px) {
+    .title {
+      font-size: 36px;
+    }
+
+    .search-input, .button, th, td {
+      font-size: 18px;
+    }
+  }
+
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <span class="title">Generátor gramatiky</span>
+    <div class="search-bar">
+      <input class="search-input" type="text" placeholder="Vyhladávať">
+      <button class="search-button">&#x1F50D;</button>
+    </div>
+  </div>
+  <div class="buttons">
+    <a href="test.html"><button class="button active">Tvary slova</button></a>
+    <a href="vyznam_slova.html"><button class="button">Význam slova</button></a>
+    <a href="synonyma.html"><button class="button">Synonymá slova</button></a>
+  </div>
+  <div class="table-container">
+    <table>
+      <tr>
+        <th>Pád</th>
+        <th>Singulár</th>
+        <th>Plurál</th>
+      </tr>
+      <tr>
+        <td>Nominatív</td>
+        <td>auto</td>
+        <td>autá</td>
+      </tr>
+      <tr>
+        <td>Genitív</td>
+        <td>auta</td>
+        <td>áut</td>
+      </tr>
+      <tr>
+        <td>Datív</td>
+        <td>autu</td>
+        <td>autám</td>
+      </tr>
+      <tr>
+        <td>Akuzatív</td>
+        <td>auto</td>
+        <td>autá</td>
+      </tr>
+      <tr>
+        <td>Lokál</td>
+        <td>aute</td>
+        <td>autách</td>
+      </tr>
+      <tr>
+        <td>Inštrumentál</td>
+        <td>autom</td>
+        <td>autami</td>
+      </tr>
+    </table>
+  </div>
+  <div class="bottom-button">
+    <a href="priklady.html"><button class="button">Použitie vo vetách</button></a>
+  </div>
+</div>
+</body>
+</html>
